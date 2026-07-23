@@ -2,6 +2,7 @@ import evento
 from datetime import datetime, date
 
 def crear_evento():
+
     nombre = input("introduzca nombre del evento: ")
 
     fecha = None
@@ -26,3 +27,14 @@ def crear_evento():
 
     event = evento.Evento(nombre, fecha, hora, ubicacion, categoria, descripcion)
     return event
+
+def eliminar_evento(liste):
+    adel = input("nombre del evento que deseas eliminar: ")
+
+    for e in liste:
+        if e.nombre == adel:
+            liste.remove(e)
+            print ("Evento eliminado")
+            return
+
+    print("No se encontro ningun evento con ese nombre")
