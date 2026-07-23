@@ -42,7 +42,7 @@ def eliminar_evento(l1):
 def edit_event(l2):
 
     pice = input("que evento quieres editar?: ")
-    picu = input("que quieres editar del evento?: nombre, fecha, hora, ubicacion, categoria, descripcion")
+    picu = input("que quieres editar del evento?: nombre, fecha, hora, ubicacion, categoria, descripcion: ")
     
     for a in l2:
         if pice == a.nombre:
