@@ -9,3 +9,6 @@
 * del event
 * edit event
 * list event
+## main:
+* main loop 
+ * user interaction
