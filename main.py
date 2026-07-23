@@ -1,4 +1,3 @@
-import evento
 import gestor
 
 ls = []
