@@ -38,3 +38,15 @@ def eliminar_evento(liste):
             return
 
     print("No se encontro ningun evento con ese nombre")
+
+def edit_event(listed):
+    pice = input("que evento quieres editar?: ")
+    picu = input("que quieres editar del evento?: nombre, fecha, hora, ubicacion, categoria, descripcion")
+    
+    for a in listed:
+        if pice == a.nombre:
+            pici = input("nuevo valor: ")
+            setattr(a, picu, pici)
+            print("Evento actualizado")
+            return
+    print ("ese evento no existe")
