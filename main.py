@@ -4,13 +4,18 @@ import gestor
 ls = []
 
 while True:
-    des = int(input(
-    "que desea hacer: \n" \
-    "1 - crear evento\n" \
-    "2 - eliminar evento\n" \
-    "3 - editar evento\n" \
-    "4 - listar eventos\n" \
-    "0 - salir"))
+    try:
+        des = int(input(
+        "que desea hacer: \n" \
+        "1 - crear evento\n" \
+        "2 - eliminar evento\n" \
+        "3 - editar evento\n" \
+        "4 - listar eventos\n" \
+        "0 - salir"))
+    except ValueError:
+        print("lo que introdujo no es un numero, intente denuevo")
+        continue
+
     if des == 0:
         break
     elif des == 1:
@@ -22,3 +27,5 @@ while True:
         gestor.edit_event(ls)
     elif des == 4:
         gestor.list_event(ls)
+    else:
+        print ("ese numero se va de rango")
