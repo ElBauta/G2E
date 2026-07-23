@@ -28,25 +28,34 @@ def crear_evento():
     event = evento.Evento(nombre, fecha, hora, ubicacion, categoria, descripcion)
     return event
 
-def eliminar_evento(liste):
+def eliminar_evento(l1):
     adel = input("nombre del evento que deseas eliminar: ")
 
-    for e in liste:
+    for e in l1:
         if e.nombre == adel:
-            liste.remove(e)
+            l1.remove(e)
             print ("Evento eliminado")
             return
 
     print("No se encontro ningun evento con ese nombre")
 
-def edit_event(listed):
+def edit_event(l2):
+
     pice = input("que evento quieres editar?: ")
     picu = input("que quieres editar del evento?: nombre, fecha, hora, ubicacion, categoria, descripcion")
     
-    for a in listed:
+    for a in l2:
         if pice == a.nombre:
             pici = input("nuevo valor: ")
             setattr(a, picu, pici)
             print("Evento actualizado")
             return
     print ("ese evento no existe")
+
+def list_event(l3):
+    if not l3:
+        print ("No hay elementos en la lsita")
+        return
+    for i in l3:
+        print (i)
+        print ("-" * 30)   

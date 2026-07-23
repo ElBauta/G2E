@@ -8,3 +8,4 @@
 * add event
 * del event
 * edit event
+* list event
