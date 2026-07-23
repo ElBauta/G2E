@@ -28,7 +28,8 @@ def crear_evento():
     event = evento.Evento(nombre, fecha, hora, ubicacion, categoria, descripcion)
     return event
 
-def eliminar_evento(l1):
+def eliminar_evento(l1):\
+
     adel = input("nombre del evento que deseas eliminar: ")
 
     for e in l1:

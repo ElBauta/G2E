@@ -1,3 +1,5 @@
+# buscar dataclasses
+
 class Evento:
 
     def __init__(self, nombre, fecha, hora, ubicacion, categoria, descripcion = ""):
