@@ -10,7 +10,7 @@ while True:
         "2 - eliminar evento\n" \
         "3 - editar evento\n" \
         "4 - listar eventos\n" \
-        "0 - salir"))
+        "0 - salir: "))
     except ValueError:
         print("lo que introdujo no es un numero, intente denuevo")
         continue
