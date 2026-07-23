@@ -11,4 +11,9 @@ class Evento:
 
     def __str__(self):
 
-        return (f"{self.nombre}, es el {self.fecha}, a las {self.hora}, en {self.ubicacion}, esta es la descripcion adjunta {self.descripcion}, y la categoria {self.categoria}")
+        return (f"Evento: {self.nombre}\n"
+                f"Fecha: {self.fecha}\n"
+                f"Hora: {self.hora}\n"
+                f"Ubicacion: {self.ubicacion}\n"
+                f"Descripcion: {self.descripcion}\n"
+                f"Categoria: {self.categoria}")
