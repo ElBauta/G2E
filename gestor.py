@@ -49,6 +49,21 @@ def edit_event(l2):
     
     for a in l2:
         if pice == a.nombre:
+            if picu == "fecha":
+                pici = None
+                while pici == None:
+                    try:
+                        pici2 = input("Que dia sera (DD/MM/AAAA)?: ")
+                        pici1 = datetime.strptime(pici2, "%d/%m/%Y").date()
+                        if pici1 < date.today():
+                            print("no puedes crear un evento en el pasado")
+                        else:
+                            pici = pici1
+                            setattr (a, picu, pici)
+                            return
+                    except ValueError:
+                        print("formato de fecha invalido")
+            
             pici = input("nuevo valor: ")
             setattr(a, picu, pici)
             print("Evento actualizado")
