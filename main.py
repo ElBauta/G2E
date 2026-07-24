@@ -1,6 +1,6 @@
 import gestor
 
-ls = []
+ls = gestor.from_event()
 
 while True:
     des = input(
@@ -12,6 +12,7 @@ while True:
     "0 - salir: ")
 
     if des == '0':
+        gestor.save_event(ls)
         break
 
     if des == '1':

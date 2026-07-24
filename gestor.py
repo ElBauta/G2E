@@ -1,4 +1,6 @@
 import evento
+import json
+
 from datetime import datetime, date
 
 def crear_evento():
@@ -28,7 +30,7 @@ def crear_evento():
     event = evento.Evento(nombre, fecha, hora, ubicacion, categoria, descripcion)
     return event
 
-def eliminar_evento(l1):\
+def eliminar_evento(l1):
 
     adel = input("nombre del evento que deseas eliminar: ")
 
@@ -54,9 +56,35 @@ def edit_event(l2):
     print ("ese evento no existe")
 
 def list_event(l3):
+
     if not l3:
         print ("No hay elementos en la lsita")
         return
     for i in l3:
         print (i)
-        print ("-" * 30)   
+        print ("-" * 30)
+
+def save_event(l4):
+    sv = []
+    for o in l4:
+        av = evento.Evento.to_dict(o)
+        sv.append(av)
+    with open("event.json", "w") as archive:
+        json.dump(sv, archive, indent = 4)
+    
+def from_event():
+
+    try:
+        with open("event.json", "r") as arichve:
+            ls = json.load(arichve)
+    except FileNotFoundError:
+        ls = []
+    except json.JSONDecodeError:
+        ls = []
+
+    res = []
+    for u in ls:
+        res.append(evento.Evento.from_dict(u))
+    
+    return res
+

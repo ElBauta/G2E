@@ -1,5 +1,5 @@
 # buscar dataclasses
-from datetime import datetime, date
+from datetime import datetime
 
 class Evento:
 
