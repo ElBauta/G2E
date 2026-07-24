@@ -13,6 +13,7 @@
 * list event
 * save_event(to JSON)
 * from_event(to JSON)
+* search_for_camp
 ## main:
 * main loop 
  * user interaction
