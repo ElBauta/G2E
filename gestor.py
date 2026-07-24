@@ -103,3 +103,20 @@ def from_event():
     
     return res
 
+def search_key(n,l5):
+    ls = []
+
+    for ji in l5:
+        if n.lower() in ji.nombre.lower():
+            ls.append(ji)
+
+    return ls
+
+def search_catg(n,l6):
+    ls = []
+    
+    for je in l6:
+        if n.lower() in je.categoria.lower():
+            ls.append(je)
+    
+    return ls
